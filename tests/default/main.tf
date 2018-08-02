@@ -14,5 +14,5 @@ module "internal_zone" {
 
   environment = "Test"
 
-  vpc_id = "${aws_vpc.testing.id}"
+  target_vpc_id = "${aws_vpc.testing.id}"
 }

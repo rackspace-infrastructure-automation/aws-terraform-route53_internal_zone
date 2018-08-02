@@ -10,5 +10,5 @@ module "internal_zone" {
 
   environment = "Development"
 
-  vpc_id = "vpc-26dd8d42"
+  target_vpc_id = "vpc-26dd8d42"
 }
