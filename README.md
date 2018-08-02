@@ -1,29 +1,16 @@
-# Route53 Internal Zone Creation
 
-## Variables
-```
-variable "zone_name" {
-  description = "TLD for Internal Hosted Zone, i.e. example.com"
-  type = "string"
-}
+## Inputs
 
-variable "zone_environment" {
-  description = "Application environment for which this network is being created. e.g. Development/Production."
-  type = "string"
-  default = "Development"
-  allowedValues = ["Development", "Integration", "PreProduction", "Production", "QA", "Staging", "Test"]
-}
-
-variable "target_vpc_id" {
-  description = "Select Virtual Private Cloud ID, e.g. vpc-*"
-  type = "string"
-}
-
-```
-
+| Name | Description | Type | Default | Required |
+|------|-------------|:----:|:-----:|:-----:|
+| environment | Application environment for which this network is being created. one of: ('Development', 'Integration', 'PreProduction', 'Production', 'QA', 'Staging', 'Test') | string | `Development` | no |
+| target_vpc_id | Select Virtual Private Cloud ID. ( vpc-* ) | string | - | yes |
+| zone_name | TLD for Internal Hosted Zone. ( example.com ) | string | - | yes |
 
 ## Outputs
 
-`internal_hosted_name` e.g. `internal_hosted_name = example.com`
+| Name | Description |
+|------|-------------|
+| internal_hosted_name | Hosted Zone Name |
+| internal_hosted_zone_id | Hosted Zone ID |
 
-`internal_hosted_zone_id` e.g. `internal_hosted_zone_id = Z2GW3D8EFNF0VC`
