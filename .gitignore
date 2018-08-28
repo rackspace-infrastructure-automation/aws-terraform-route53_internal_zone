@@ -1,2 +1,7 @@
-
-.idea/
+*.tfstate
+*.tfstate.backup
+.terraform/
+.DS_Store
+.idea/*
+*.tfvars
+*.plan
