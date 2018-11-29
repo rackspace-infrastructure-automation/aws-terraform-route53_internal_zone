@@ -18,7 +18,9 @@ resource "aws_route53_zone" "internal_zone" {
   comment = "Hosted zone for ${local.environment}"
 
   # Check to see if input starts with 'vpc-'. True=use input, False=use empty string
-  vpc_id = "${replace(var.target_vpc_id, "/^vpc-/", "") != var.target_vpc_id ? var.target_vpc_id:""}"
+  vpc = {
+    vpc_id = "${replace(var.target_vpc_id, "/^vpc-/", "") != var.target_vpc_id ? var.target_vpc_id:""}"
+  }
 
   tags = "${merge(var.custom_tags, local.module_tags)}"
 }
