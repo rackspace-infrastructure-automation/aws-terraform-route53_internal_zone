@@ -1,6 +1,7 @@
-variable "zone_name" {
-  description = "TLD for Internal Hosted Zone. ( example.com )"
-  type        = "string"
+variable "custom_tags" {
+  description = "Optional tags to be applied on top of the base tags on all resources"
+  type        = "map"
+  default     = {}
 }
 
 variable "environment" {
@@ -11,5 +12,10 @@ variable "environment" {
 
 variable "target_vpc_id" {
   description = "Select Virtual Private Cloud ID. ( vpc-* )"
+  type        = "string"
+}
+
+variable "zone_name" {
+  description = "TLD for Internal Hosted Zone. ( example.com )"
   type        = "string"
 }
