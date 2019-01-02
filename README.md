@@ -4,7 +4,7 @@
 
 ```
 module "internal_zone" {
-  source = "git@github.com:rackspace-infrastructure-automation/aws-terraform-route53_internal_zone//?ref=v0.0.2"
+  source = "git@github.com:rackspace-infrastructure-automation/aws-terraform-route53_internal_zone//?ref=v0.0.3"
 
   target_vpc_id = "vpc-12345678901234567"
   zone_name     = "customer.local"
