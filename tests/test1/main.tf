@@ -1,5 +1,9 @@
+terraform {
+  required_version = ">= 0.12"
+}
+
 provider "aws" {
-  version = "~> 1.2"
+  version = "~> 2.2"
   region  = "us-west-2"
 }
 
@@ -14,5 +18,5 @@ module "internal_zone" {
 
   environment = "Test"
 
-  target_vpc_id = "${aws_vpc.testing.id}"
+  target_vpc_id = aws_vpc.testing.id
 }
