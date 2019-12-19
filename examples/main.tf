@@ -10,9 +10,7 @@ provider "aws" {
 module "internal_zone" {
   source = "git@github.com:rackspace-infrastructure-automation/aws-terraform-route53_internal_zone//?ref=v0.0.3"
 
-  zone_name = "example.com"
-
   environment = "Development"
-
-  target_vpc_id = "vpc-26dd8d42"
+  name        = "example.com"
+  vpc_id      = "vpc-26dd8d42"
 }

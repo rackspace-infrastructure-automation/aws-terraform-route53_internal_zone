@@ -14,9 +14,7 @@ resource "aws_vpc" "testing" {
 module "internal_zone" {
   source = "../../module"
 
-  zone_name = "example.com"
-
   environment = "Test"
-
-  target_vpc_id = aws_vpc.testing.id
+  name        = "example.com"
+  vpc_id      = aws_vpc.testing.id
 }
