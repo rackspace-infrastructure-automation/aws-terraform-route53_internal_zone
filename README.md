@@ -25,8 +25,8 @@ made when upgrading from a previous release to version 0.12.0 or higher.
 
 The following module variables were updated to better meet current Rackspace style guides:
 
-- `custom_tags` -> `tags`  
-- `target_vpc_id` -> `vpc_id`  
+- `custom_tags` -> `tags`
+- `target_vpc_id` -> `vpc_id`
 - `zone_name` -> `name`
 
 ## Providers
@@ -39,10 +39,10 @@ The following module variables were updated to better meet current Rackspace sty
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:-----:|
-| environment | Application environment for which this network is being created. one of: ('Development', 'Integration', 'PreProduction', 'Production', 'QA', 'Staging', 'Test') | `string` | `"Development"` | no |
+| environment | Application environment for which this zone is being created (e.g. 'Development', 'Integration', 'PreProduction', 'Production', 'QA', 'Staging', 'Test'). | `string` | `"Development"` | no |
 | name | TLD for Internal Hosted Zone. ( example.com ) | `string` | n/a | yes |
 | tags | Optional tags to be applied on top of the base tags on all resources | `map(string)` | `{}` | no |
-| vpc\_id | Select Virtual Private Cloud ID. ( vpc-\* ) | `string` | n/a | yes |
+| vpc\_id | Select Virtual Private Cloud ID. ( vpc-* ) | `string` | n/a | yes |
 
 ## Outputs
 

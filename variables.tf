@@ -1,5 +1,5 @@
 variable "environment" {
-  description = "Application environment for which this network is being created. one of: ('Development', 'Integration', 'PreProduction', 'Production', 'QA', 'Staging', 'Test')"
+  description = "Application environment for which this zone is being created (e.g. 'Development', 'Integration', 'PreProduction', 'Production', 'QA', 'Staging', 'Test')."
   type        = string
   default     = "Development"
 }
