@@ -15,6 +15,6 @@ module "internal_zone" {
   source = "../../module"
 
   environment = "Test"
-  name        = "example.com"
+  name        = "EXAMPLE.COM"
   vpc_id      = aws_vpc.testing.id
 }
