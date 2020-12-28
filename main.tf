@@ -8,7 +8,7 @@
  * ```HCL
  * module "internal_zone" {
  *  source = "git@github.com:rackspace-infrastructure-automation/aws-terraform-route53_internal_zone//?ref=v0.12.0"
- * 
+ *
  *  name   = "customer.local"
  *  vpc_id = "vpc-12345678901234567"
  * }
@@ -21,11 +21,11 @@
  *
  * Several changes were required while adding terraform 0.12 compatibility.  The following changes should be
  * made when upgrading from a previous release to version 0.12.0 or higher.
- * 
+ *
  * ### Module variables
- * 
+ *
  * The following module variables were updated to better meet current Rackspace style guides:
- * 
+ *
  * - `custom_tags` -> `tags`
  * - `target_vpc_id` -> `vpc_id`
  * - `zone_name` -> `name`
@@ -49,7 +49,7 @@ locals {
 
 resource "aws_route53_zone" "internal_zone" {
   comment = "Hosted zone for ${var.environment}"
-  name    = var.name
+  name    = lower(var.name)
   tags    = merge(var.tags, local.module_tags)
 
   vpc {
