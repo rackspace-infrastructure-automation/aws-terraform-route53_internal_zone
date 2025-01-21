@@ -1,3 +1,6 @@
+> [!CAUTION]
+> This project is end of life. This repo will be deleted on June 2nd 2025.
+
 # aws-terraform-route53\_internal\_zone
 
 This module creates an internal Route53 zone.
